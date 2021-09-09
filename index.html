@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fullpage.min.css">
+    <!-- <link rel="stylesheet" href="fullpage.min.css"> -->
     <link rel="stylesheet" href="styles.css">   
     <title>Abhinav Upadhyay</title>
 </head>
 <body>
-
     <div class="navbar">
         <nav>
             <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#work">Work</a>
-                <a href="#connect">Connect</a>       
+                <a class="active home" href="#home">Home</a>
+                <a class="about" href="#about">About</a>
+                <a class="skills" href="#skills">Skills</a>
+                <a class="work" href="#work">Work</a>
+                <a class="connect" href="#connect">Connect</a>       
             </div>
         </nav>
     </div>
 
-    <div id="fullpage">        
-        <div class="section home" data-anchor="home">                     
+    <div>        
+        <div class="section home" id="home">                     
             <h2 class="big-text">Welcome To My World !</h2>   
             <img class="arrow" src="./images/arrow.png" alt="arrow">
         </div>
-        <div class="section about" data-anchor="about">
+        <hr>
+        <div class="section about" id="about">
                 <div class="myself">
                     <img src="./images/abhinav.png" alt="">
                     <h1>ABHINAV UPADHYAY</h1>
@@ -53,17 +53,142 @@
                     <p>CGPA : 10</p>                    
                 </div>  
         </div>
-        <div class="section skills" data-anchor="skills">
-            <h1>skill section</h1>
+        <hr>
+        <div class="section skills" id="skills">            
+            <div class="skill-box">
+                <div class="technical">
+                    <h1>TECHNICAL SKILLS</h1>
+                    <div class="tech-skill">
+                        <div class="data">
+                            <p>C++</p>
+                            <p>75%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="cpp"></span>
+                        </div>  
+                    </div>
+                    <div class="tech-skill">
+                        <div class="data">
+                            <p>Python</p>
+                            <p>70%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="python"></span>
+                        </div>  
+                    </div>
+                    <div class="tech-skill">
+                        <div class="data">
+                            <p>HTML</p>
+                            <p>80%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="html"></span>
+                        </div>  
+                    </div>
+                    <div class="tech-skill">
+                        <div class="data">
+                            <p>CSS</p>
+                            <p>65%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="css"></span>
+                        </div>  
+                    </div>
+                    <div class="tech-skill">
+                        <div class="data">
+                            <p>JavaScript</p>
+                            <p>55%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="js"></span>
+                        </div>  
+                    </div>
+                    <div class="tech-skill">
+                        <div class="data">
+                            <p>Bootstrap</p>
+                            <p>70%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="bootstrap"></span>
+                        </div>  
+                    </div>
+                    <div class="tech-skill">
+                        <div class="data">
+                            <p>jQuery</p>
+                            <p>40%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="jQuery"></span>
+                        </div>  
+                    </div>
+                    <div class="tech-skill">
+                        <div class="data">
+                            <p>ReactJS</p>
+                            <p>40%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="react"></span>
+                        </div>  
+                    </div>
+                    <div class="tech-skill">
+                        <div class="data">
+                            <p>NodeJS</p>
+                            <p>50%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="node"></span>
+                        </div>  
+                    </div>
+                </div>
+                <div class="professional">
+                    <h1>PROFESSIONAL SKILLS</h1>
+                    <div class="pro-skill">
+                        <div class="circular">
+                            <svg>
+                                <circle cx="50%" cy="50%" r="5rem"/>
+                                <circle class="communication" cx="50%" cy="50%" r="5rem"/>
+                            </svg>
+                            <p class="level">80%</p>
+                            <p class="skill-tag">Communication</p>
+                        </div>
+                        <div class="circular">
+                            <svg>
+                                <circle cx="50%" cy="50%" r="5rem"/>
+                                <circle class="team" cx="50%" cy="50%" r="5rem"/>
+                            </svg>
+                            <p class="level">90%</p>
+                            <p class="skill-tag">Team Work</p>
+                        </div>
+                        <div class="circular">
+                            <svg>
+                                <circle cx="50%" cy="50%" r="5rem"/>
+                                <circle class="project" cx="50%" cy="50%" r="5rem"/>
+                            </svg>
+                            <p class="level">70%</p>
+                            <p class="skill-tag">Project Management</p>
+                        </div>
+                        <div class="circular">
+                            <svg>
+                                <circle cx="50%" cy="50%" r="5rem"/>
+                                <circle class="creativity" cx="50%" cy="50%" r="5rem"/>
+                            </svg>
+                            <p class="level">85%</p>
+                            <p class="skill-tag">Creativity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="section work" data-anchor="work">
+        <hr>
+        <div class="section work" id="work">
             <h1>work section</h1>
         </div>
-        <div class="section connect" data-anchor="connect">
+        <hr>
+        <div class="section connect" id="connect">
             <h1>contact form</h1>
         </div>
     </div>
-    <div class="intro">
+    <!-- <div class="intro">
         <div class="intro-text">
             <h1 class="hide hello">
                 <span class="text text-1">Hello!</span>
@@ -75,9 +200,9 @@
                 <span class="text text-3">a Full Stack Web Developer.</span>
             </h1>
         </div>
-    </div>
+    </div> -->
 
-    <script src="./fullpage.min.js"></script>
+    <!-- <script src="./fullpage.min.js"></script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -88,3 +213,11 @@
     <script src="./app.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+

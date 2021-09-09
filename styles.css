@@ -5,6 +5,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Glory', sans-serif;
+    color: ivory;
+}
+
+body{
+    background: #02171D;
 }
 
 .dots{
@@ -12,6 +17,7 @@
     border-top: 0.4rem dotted ivory;
     margin: 0 45%;
 }
+
 
 /* //////////////////// Slider CSS ///////////////////// */
 
@@ -64,15 +70,13 @@
 nav{
     z-index: 1;
     position: fixed;
-    top: 0%;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 8vh;
     width: 100%;
-    /* background: #02171D; */
+    background: #02171D;
+    box-shadow: 0 0 2rem black;
 }
 
 .nav-links{    
@@ -83,28 +87,32 @@ nav{
 .nav-links a{   
     text-decoration: none; 
     letter-spacing: 0.05rem;
-    font-size: 1.2rem;
-    color: ivory;
+    font-size: 1.1rem;
     font-weight: 500;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1.5rem;
+    margin: 0 1rem;
+    text-transform: uppercase;
 }
 
-.nav-links a:hover{
-    margin: 0 5rem;
-    border: 0.1rem solid ivory;
+
+.nav-links a.active, .nav-links a:hover{
+    font-weight: 700;
+    background-color: ivory;
+    color: #02171D;
+    border-radius: 0.1rem;
+    transition: 0.3 ease ivory;
 }
 
 /* //////////////////// Sections CSS ///////////////////// */
 
 .section{
     height: 100vh;
-    background: #02171D;
 }
 
 /* //////////////////// Home CSS ///////////////////// */
 
-.home{
-    background: url("https://images.pexels.com/photos/3473569/pexels-photo-3473569.jpeg?cs=srgb&dl=pexels-elijah-o%27donnell-3473569.jpg&fm=jpg");
+#home{
+    background: url("./images/home_background.jpg");
     background-size: cover;
 }
 
@@ -115,7 +123,7 @@ nav{
     left: 50%;
     transform: translateX(-50%);
     font-size: 5rem;
-    color: ivory;
+    
 }
 
 .arrow{
@@ -127,25 +135,17 @@ nav{
 
 /* //////////////////// About CSS ///////////////////// */
 
-.about{
-    background: #02171D;
+#about{
+    display: flex;
+
     align-items: center;
 }
 
 .myself, .education{
-    position: absolute;
-    top: 10%;
     width: 50%;
-    color: ivory;    
     padding: 2rem;
     text-align: center;
 }
-
-.education{
-    left: 47%;
-    padding-right: 5rem;
-}
-
 
 .myself img{
     height: 15rem;
@@ -172,3 +172,312 @@ nav{
     text-align: center;
 }
 
+/* //////////////////// Skills CSS ///////////////////// */
+
+#skills{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-box{
+    display: flex;
+    padding: 1rem;
+    box-shadow: 0rem 0rem 2rem black;
+    border-radius: 1rem;
+    width: 90%;
+    text-align: center;
+}
+
+.skill-box h1{
+    margin: 0 3rem 1rem;
+    font-size: 2.5rem;
+}
+
+.skill-box .technical, .skill-box .professional{
+    width: 50%;
+    padding: 1rem;
+}
+
+/* //////////////////// Technical Skills CSS ///////////////////// */
+
+.tech-skill{
+    margin: 1.1rem ;
+}
+
+.tech-skill .data{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 1.1rem;
+}
+
+.tech-skill .bar{
+    position: relative;
+    height: 1rem;
+    margin-top: 0.1rem;
+    background-color: rgb(14, 14, 14);
+    border-radius: 0.5rem;
+}
+
+.tech-skill .bar span{
+    margin: 0 0.1rem;
+    position: absolute;
+    background-color: cyan;
+    height: 80%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0.4rem;
+
+}
+
+/* //////////////////// Techinacl Skills Animation ///////////////////// */
+
+.cpp{
+    width: 75%;
+    animation: cpp 2s;
+}
+
+@keyframes cpp{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+.python{
+    width: 70%;
+    animation: python 2s;
+}
+
+@keyframes python{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+.html{
+    width: 80%;
+    animation: html 2s;
+}
+
+@keyframes html{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+.css{
+    width: 65%;
+    animation: css 2s;
+}
+
+@keyframes css{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 65%;
+    }
+}
+
+.js{
+    width: 55%;
+    animation: js 2s;
+}
+
+@keyframes js{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 55%;
+    }
+}
+
+.bootstrap{
+    width: 70%;
+    animation: bootstrap 2s;
+}
+
+@keyframes bootstrap{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+.jQuery{
+    width: 40%;
+    animation: jQuery 2s;
+}
+
+@keyframes jQuery{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 40%;
+    }
+}
+
+.react{
+    width: 40%;
+    animation: react 2s;
+}
+
+@keyframes react{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 40%;
+    }
+}
+
+.node{
+    width: 50%;
+    animation: node 2s;
+}
+
+@keyframes node{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+
+/* //////////////////// Professional Skills CSS ///////////////////// */
+
+.pro-skill{    
+    height: 90%;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.circular{    
+    position: relative;
+    height: 14rem;
+    width: 15rem;
+    justify-content: center;
+    align-items: center;
+}
+.circular svg{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 12rem;
+    width: 12rem;
+}
+
+.circular svg circle{
+    fill: transparent;
+    stroke: rgb(14, 14, 14);
+    stroke-width: 1rem;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+}
+
+.circular svg circle:nth-child(2){
+    /* z-index: 2; */
+    fill: transparent;
+    stroke: cyan;
+    stroke-width: 0.80rem;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    stroke-linecap: round;            
+}
+
+.circular .level{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5rem;
+}
+
+.circular .skill-tag{
+    width: fit-content;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);   
+    font-size: 1.5rem;
+}
+
+/* //////////////////// Professional Skills Animation ///////////////////// */
+
+.communication{
+    stroke-dashoffset: 100;
+    animation: communication 2s steps(500) forwards;
+}
+
+@keyframes communication{
+    0%{
+        stroke-dashoffset: 500;
+    }
+    100%{
+        stroke-dashoffset: 100;
+    }
+}
+
+.team{
+    stroke-dashoffset: 50;
+    animation: team 2s steps(500) forwards;
+}
+
+@keyframes team{
+    0%{
+        stroke-dashoffset: 500;
+    }
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+
+.project{
+    stroke-dashoffset: 150;
+    animation: project 2s steps(500) forwards;
+}
+
+@keyframes project{
+    0%{
+        stroke-dashoffset: 500;
+    }
+    100%{
+        stroke-dashoffset: 150;
+    }
+}
+
+
+.creativity{
+    stroke-dashoffset: 75;
+    animation: creativity 2s steps(500) forwards;
+}
+
+@keyframes creativity{
+    0%{
+        stroke-dashoffset: 500;
+    }
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
