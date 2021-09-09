@@ -3,6 +3,12 @@
 const sections = document.querySelectorAll("div .section");
 const navItems = document.querySelectorAll("nav div a");
 
+const skillsSection = document.querySelector("#skills");
+const techSkills = document.querySelectorAll(".tech-skill .bar span")
+const proSkills = document.querySelectorAll(".pro-skill .circular circle")
+
+
+
 window.addEventListener("scroll", ()=>{
     let current = "";
 
@@ -20,6 +26,34 @@ window.addEventListener("scroll", ()=>{
             item.classList.add("active")
         }
     })
+
+
+    // technical skills animation
+
+    const skillsTop = skillsSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight;
+    console.log(skillsTop);
+    console.log(screenPos);
+    if(skillsTop < screenPos/4.5 && (skillsTop*(-1)) < screenPos/2){
+        console.log("running");
+        techSkills.forEach(skill => {
+            skill.classList.add("active-bar")
+        })
+        proSkills.forEach(skill => {
+            skill.classList.add("active-circle")
+        })
+    }
+    else{
+        techSkills.forEach(skill => {
+            skill.classList.remove("active-bar")
+        })
+        proSkills.forEach(skill => {
+            skill.classList.remove("active-circle")
+        })
+    }
+
+
+
 })
 
 

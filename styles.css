@@ -221,7 +221,7 @@ nav{
     border-radius: 0.5rem;
 }
 
-.tech-skill .bar span{
+.tech-skill .bar span.active-bar{
     margin: 0 0.1rem;
     position: absolute;
     background-color: cyan;
@@ -235,7 +235,7 @@ nav{
 
 /* //////////////////// Techinacl Skills Animation ///////////////////// */
 
-.cpp{
+.cpp.active-bar{
     width: 75%;
     animation: cpp 2s;
 }
@@ -249,7 +249,7 @@ nav{
     }
 }
 
-.python{
+.python.active-bar{
     width: 70%;
     animation: python 2s;
 }
@@ -263,7 +263,7 @@ nav{
     }
 }
 
-.html{
+.html.active-bar{
     width: 80%;
     animation: html 2s;
 }
@@ -277,7 +277,7 @@ nav{
     }
 }
 
-.css{
+.css.active-bar{
     width: 65%;
     animation: css 2s;
 }
@@ -291,7 +291,7 @@ nav{
     }
 }
 
-.js{
+.js.active-bar{
     width: 55%;
     animation: js 2s;
 }
@@ -305,7 +305,7 @@ nav{
     }
 }
 
-.bootstrap{
+.bootstrap.active-bar{
     width: 70%;
     animation: bootstrap 2s;
 }
@@ -319,7 +319,7 @@ nav{
     }
 }
 
-.jQuery{
+.jQuery.active-bar{
     width: 40%;
     animation: jQuery 2s;
 }
@@ -333,7 +333,7 @@ nav{
     }
 }
 
-.react{
+.react.active-bar{
     width: 40%;
     animation: react 2s;
 }
@@ -347,7 +347,7 @@ nav{
     }
 }
 
-.node{
+.node.active-bar{
     width: 50%;
     animation: node 2s;
 }
@@ -425,7 +425,7 @@ nav{
 
 /* //////////////////// Professional Skills Animation ///////////////////// */
 
-.communication{
+.communication.active-circle{
     stroke-dashoffset: 100;
     animation: communication 2s steps(500) forwards;
 }
@@ -439,7 +439,7 @@ nav{
     }
 }
 
-.team{
+.team.active-circle{
     stroke-dashoffset: 50;
     animation: team 2s steps(500) forwards;
 }
@@ -453,7 +453,7 @@ nav{
     }
 }
 
-.project{
+.project.active-circle{
     stroke-dashoffset: 150;
     animation: project 2s steps(500) forwards;
 }
@@ -468,7 +468,7 @@ nav{
 }
 
 
-.creativity{
+.creativity.active-circle{
     stroke-dashoffset: 75;
     animation: creativity 2s steps(500) forwards;
 }
