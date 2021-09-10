@@ -15,55 +15,10 @@ body{
 .dots{
     border: 0;
     border-top: 0.4rem dotted ivory;
-    margin: 0 45%;
+    margin: 1rem 45%;
 }
 
-
-/* //////////////////// Slider CSS ///////////////////// */
-
-.intro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #02171D;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.intro-text{
-    text-align: center;
-    color: rgb(233, 233, 233);
-}
-
-.hide{
-    margin: 1rem 0;
-    background: #02171D;
-    overflow: hidden;
-}
-
-.hide span{
-    transform: translateY(100%);
-    display: inline-block;
-}
-
-.hello{
-    margin-bottom: 4rem;
-}
-
-.text-1{
-    font-size: 3rem;
-}
-
-.text-2{
-    font-size: 4rem;
-}
-
-.text-3{
-    font-size: 2.5rem;
-}
+/* @media only screen and (min-width: 720px){ */
 
 /* //////////////////// Navbar CSS ///////////////////// */
 
@@ -106,45 +61,48 @@ nav{
 /* //////////////////// Sections CSS ///////////////////// */
 
 .section{
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* //////////////////// Home CSS ///////////////////// */
 
 #home{
+    height: 100vh;
     background: url("./images/home_background.jpg");
-    background-size: cover;
+    background-size: cover;    
 }
 
-.big-text{
-    width: fit-content;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 5rem;
-    
+#home h1{
+    font-size: 4rem;
+    margin-top: 3rem;
+}
+
+#home h2{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
 }
 
 .arrow{
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 3rem;
 }
 
 /* //////////////////// About CSS ///////////////////// */
 
-#about{
+#about .about-items{
     display: flex;
-
-    align-items: center;
 }
 
 .myself, .education{
+    box-shadow: 0rem 0rem 2rem black;
+    border-radius: 1rem;
     width: 50%;
     padding: 2rem;
     text-align: center;
+    margin: 2rem 1rem;
 }
 
 .myself img{
@@ -168,42 +126,33 @@ nav{
     line-height: 2rem;
 }
 
-.education span{
-    text-align: center;
-}
 
 /* //////////////////// Skills CSS ///////////////////// */
 
-#skills{
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .skill-box{
     display: flex;
-    padding: 1rem;
     box-shadow: 0rem 0rem 2rem black;
     border-radius: 1rem;
-    width: 90%;
+    width: 100%;
     text-align: center;
+    margin: 2rem 1rem;
 }
 
 .skill-box h1{
-    margin: 0 3rem 1rem;
-    font-size: 2.5rem;
+    margin: 1rem auto;
+    font-size: 2.2rem;
 }
 
 .skill-box .technical, .skill-box .professional{
     width: 50%;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
 }
 
 /* //////////////////// Technical Skills CSS ///////////////////// */
 
 .tech-skill{
-    margin: 1.1rem ;
+    margin: 1rem ;
 }
 
 .tech-skill .data{
@@ -232,6 +181,297 @@ nav{
     border-radius: 0.4rem;
 
 }
+
+/* //////////////////// Professional Skills CSS ///////////////////// */
+
+.pro-skill{    
+    height: 90%;
+    display: grid;
+    grid-template-columns: auto auto;   
+    justify-content: space-around;
+    align-items: center;
+}
+.circular{    
+    position: relative;
+    height: 14rem;
+    width: 15rem;
+}
+.circular svg{
+    height: 12rem;
+    width: 12rem;
+}
+
+.circular svg circle{
+    fill: transparent;
+    stroke: rgb(14, 14, 14);
+    stroke-width: 1rem;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+}
+
+.circular svg circle:nth-child(2){
+    fill: transparent;
+    stroke: cyan;
+    stroke-width: 0.80rem;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    stroke-linecap: round;            
+}
+
+.circular .level{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-45%);
+    font-size: 2.3rem;
+}
+
+.circular .skill-tag{
+    width: fit-content;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);   
+    font-size: 1.5rem;
+}
+
+
+/* } */
+
+
+
+/* ------------------------ Media Query Small Screen ------------------------ */
+
+@media only screen and (max-width: 950px){
+
+    .dots{
+        border: 0;
+        border-top: 0.35rem dotted ivory;
+        margin: 1rem 45%;
+    }
+
+    /* //////////////////// Home CSS ///////////////////// */
+
+    #home h1{
+        font-size: 3.5rem;
+        margin-top: 3rem;
+    }
+    
+    #home h2{
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+    }
+    
+    .arrow{
+        height: 2.5rem;
+    }
+
+    /* //////////////////// About CSS ///////////////////// */
+
+    .myself img{
+        height: 12rem;
+        border: 0.2rem solid ivory ;
+        border-radius: 50%;
+        margin-bottom: 1.2rem;
+    }
+    
+    .myself h1, .education h1{
+        font-size: 2.2rem;    
+    }
+    
+    .myself p, .education p{
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+
+    /* //////////////////// Skills CSS ///////////////////// */
+
+    .skill-box h1{
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 2rem;
+    }
+
+    .circular{  
+        height: 12rem;
+        width: 13rem; 
+    }
+    .circular svg{
+        position: absolute;
+        left: 10%;
+    }
+
+    .circular svg circle{
+        transform: scale(0.8,0.8);
+    }    
+
+    .circular .level{
+       left: 50%;
+        font-size: 2rem;
+    }
+    
+    .circular .skill-tag{
+         left: 50%;
+        font-size: 1.3rem;
+    }
+
+}
+
+@media only screen and (max-width: 820px){
+
+     /* //////////////////// Skills CSS ///////////////////// */
+
+    .pro-skill{    
+        grid-template-columns: 11rem 11rem;
+    }
+
+    .circular{
+        width: 10rem;
+    }
+
+    .circular svg{      
+        left: 0%;
+    }
+
+    .circular .skill-tag{
+        width: max-content;
+        left: 50%;
+       font-size: 1.3rem;
+   }
+
+}
+
+@media only screen and (max-width: 740px){
+
+    /* //////////////////// Home CSS ///////////////////// */
+
+    #home h1{
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+    
+    #home h2{
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+    
+    .arrow{
+        height: 2.2rem;
+    }
+
+    /* //////////////////// About CSS ///////////////////// */
+
+    #about .about-items{
+        display: grid;
+        padding: 1rem;
+    }
+
+    .about-items .myself, .about-items .education{
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    /* //////////////////// Skills CSS ///////////////////// */
+
+    #skills .skill-box{
+        display: block;
+        padding-bottom: 1rem;
+    }
+
+    .skill-box .technical, .skill-box .professional{
+        width: 100%;
+    }
+
+    .skill-box .technical h1, .skill-box .professional h1{
+        margin-bottom: 2rem;
+    }
+
+    .professional .pro-skill{
+        grid-template-columns: auto auto;
+        row-gap: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 560px){
+
+    /* //////////////////// Home CSS ///////////////////// */
+
+    #home h1{
+        font-size: 2.5rem;
+        margin-top: 3rem;
+    }
+    
+    #home h2{
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: 1.7rem;
+    }
+    
+    .arrow{
+        height: 2rem;
+    }
+}
+
+@media only screen and (max-width: 440px){
+
+    /* //////////////////// Home CSS ///////////////////// */
+
+    #home h1{
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+    
+    #home h2{
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+    }
+    
+    .arrow{
+        height: 2rem;
+    }
+
+    /* //////////////////// About CSS ///////////////////// */
+
+    .about-items .myself{
+        padding: 1rem;
+    }
+
+    .myself img{
+        height: 9rem;
+        border: 0.2rem solid ivory ;
+        border-radius: 50%;
+        margin-bottom: 1.2rem;
+    }
+    
+    .myself h1, .education h1{
+        font-size: 2rem;    
+    }
+    
+    .myself p, .education p{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 380px){
+
+    /* //////////////////// Skills CSS ///////////////////// */
+    
+    .pro-skill{            
+        display: block;
+    }
+
+    .pro-skill .circular{
+        margin: 1.5rem auto 0;
+    }
+}
+
 
 /* //////////////////// Techinacl Skills Animation ///////////////////// */
 
@@ -361,67 +601,20 @@ nav{
     }
 }
 
-
-/* //////////////////// Professional Skills CSS ///////////////////// */
-
-.pro-skill{    
-    height: 90%;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.circular{    
-    position: relative;
-    height: 14rem;
-    width: 15rem;
-    justify-content: center;
-    align-items: center;
-}
-.circular svg{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 12rem;
-    width: 12rem;
+.express.active-bar{
+    width: 40%;
+    animation: express 2s;
 }
 
-.circular svg circle{
-    fill: transparent;
-    stroke: rgb(14, 14, 14);
-    stroke-width: 1rem;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 0;
-    stroke-linecap: round;
+@keyframes express{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 40%;
+    }
 }
 
-.circular svg circle:nth-child(2){
-    /* z-index: 2; */
-    fill: transparent;
-    stroke: cyan;
-    stroke-width: 0.80rem;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    stroke-linecap: round;            
-}
-
-.circular .level{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 1.5rem;
-}
-
-.circular .skill-tag{
-    width: fit-content;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%,0);   
-    font-size: 1.5rem;
-}
 
 /* //////////////////// Professional Skills Animation ///////////////////// */
 
@@ -481,3 +674,7 @@ nav{
         stroke-dashoffset: 75;
     }
 }
+
+
+
+

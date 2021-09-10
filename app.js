@@ -32,10 +32,8 @@ window.addEventListener("scroll", ()=>{
 
     const skillsTop = skillsSection.getBoundingClientRect().top;
     const screenPos = window.innerHeight;
-    console.log(skillsTop);
-    console.log(screenPos);
-    if(skillsTop < screenPos/4.5 && (skillsTop*(-1)) < screenPos/2){
-        console.log("running");
+    // if(skillsTop < screenPos/3.5 && (skillsTop*(-1)) < screenPos/2){
+    if(skillsTop < screenPos/3.5){
         techSkills.forEach(skill => {
             skill.classList.add("active-bar")
         })
