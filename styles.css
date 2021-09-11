@@ -9,7 +9,8 @@
 }
 
 body{
-    background: #02171D;
+    /* background: #02171D; */
+    background: #02171F;
     overflow-x: hidden;
 }
 
@@ -30,7 +31,7 @@ nav{
     justify-content: center;
     height: 8vh;
     width: 100%;
-    background: #02171D;
+    background: #02171F;
     box-shadow: 0 0 1rem black;
 }
 
