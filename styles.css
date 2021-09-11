@@ -10,6 +10,7 @@
 
 body{
     background: #02171D;
+    overflow-x: hidden;
 }
 
 .dots{
@@ -18,7 +19,6 @@ body{
     margin: 1rem 45%;
 }
 
-/* @media only screen and (min-width: 720px){ */
 
 /* //////////////////// Navbar CSS ///////////////////// */
 
@@ -31,7 +31,7 @@ nav{
     height: 8vh;
     width: 100%;
     background: #02171D;
-    box-shadow: 0 0 2rem black;
+    box-shadow: 0 0 1rem black;
 }
 
 .nav-links{    
@@ -40,6 +40,7 @@ nav{
 }
 
 .nav-links a{   
+    color: ivory;
     text-decoration: none; 
     letter-spacing: 0.05rem;
     font-size: 1.1rem;
@@ -55,8 +56,22 @@ nav{
     background-color: ivory;
     color: #02171D;
     border-radius: 0.1rem;
-    transition: 0.3 ease ivory;
+    transition: 0.5s ease-in;
 }
+
+nav .burger{
+    cursor: pointer;
+    display: none;
+}
+
+nav .burger div{
+    margin: 0.2rem 0;
+    height: 0.15rem;
+    width: 1.5rem;
+    background-color: ivory;
+    transition: 0.5s ease-in;
+}
+
 
 /* //////////////////// Sections CSS ///////////////////// */
 
@@ -237,9 +252,6 @@ nav{
 }
 
 
-/* } */
-
-
 
 /* ------------------------ Media Query Small Screen ------------------------ */
 
@@ -250,6 +262,15 @@ nav{
         border-top: 0.35rem dotted ivory;
         margin: 1rem 45%;
     }
+
+    .nav-links a{   
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.5rem 1.2rem;
+        margin: 0 0.8rem;
+        
+    }
+    
 
     /* //////////////////// Home CSS ///////////////////// */
 
@@ -345,6 +366,83 @@ nav{
 
 @media only screen and (max-width: 740px){
 
+    nav{
+        position: fixed;
+        left: 88%;
+        height: 7vh;
+        width: 12%;
+        margin-left: auto;        
+        border-radius: 0 0 0 0.5rem;
+    }
+
+    nav .nav-links{
+        position: absolute;
+        top: 0%;
+        right: -10rem;
+        display: grid; 
+        padding-top: 5rem;       
+        justify-content: left;
+        align-items: center;
+        background: #02171D;
+        height: 100vh;
+        width: 10rem;
+        box-shadow: 0 0 1rem black;
+        transition: 0.7s ease-in;
+    }
+
+    nav .nav-links.slideNavbar{
+        transform: translateX(-10rem);
+        transition: 0.7s ease-in;
+    }
+
+    .nav-links a{
+        margin-left: 2rem;
+    }
+
+    .nav-links a.active, .nav-links a:hover{
+        
+        background-color: ivory;
+        width: 100%;
+        border-radius: 0.2rem;
+        
+    }
+
+    nav .burger{
+        display: block;
+        z-index: 2;
+    }
+
+    .toggle .line1{
+        
+        transform: rotate(-45deg) translateY(0.48rem);
+        transition: 0.5s ease-in;
+    }
+
+    .toggle .line2{
+        opacity: 0;
+        transition: 0.5s ease-in;
+    }
+
+    .toggle .line3{
+        transition: 0.5s ease-in;
+        transform: rotate(45deg) translateY(-0.48rem);
+    }
+
+    .navLinksFade{
+        animation: navLinksFade 1.5s;
+    }
+
+    @keyframes navLinksFade{
+        from{
+            opacity: 0;
+            transform: translateX(10rem);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0rem);
+        }
+    }
+
     /* //////////////////// Home CSS ///////////////////// */
 
     #home h1{
@@ -398,6 +496,11 @@ nav{
 
 @media only screen and (max-width: 560px){
 
+    nav{
+        left: 86%;
+        width: 14%;   
+    }
+
     /* //////////////////// Home CSS ///////////////////// */
 
     #home h1{
@@ -417,6 +520,11 @@ nav{
 }
 
 @media only screen and (max-width: 440px){
+
+    nav{
+        left: 84%;
+        width: 16%;   
+    }
 
     /* //////////////////// Home CSS ///////////////////// */
 
@@ -461,6 +569,11 @@ nav{
 
 @media only screen and (max-width: 380px){
 
+    nav{
+        left: 82%;
+        width: 18%;   
+    }
+
     /* //////////////////// Skills CSS ///////////////////// */
     
     .pro-skill{            
@@ -473,7 +586,7 @@ nav{
 }
 
 
-/* //////////////////// Techinacl Skills Animation ///////////////////// */
+/* --------------------- Techinacl Skills Animation --------------------- */
 
 .cpp.active-bar{
     width: 75%;

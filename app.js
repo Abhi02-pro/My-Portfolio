@@ -55,6 +55,31 @@ window.addEventListener("scroll", ()=>{
 })
 
 
+// navbar slide animation
+
+const navSlide = ()=>{
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector(".nav-links");
+    const navLinks = document.querySelectorAll(".nav-links a");
+    
+    burger.addEventListener("click", ()=>{
+        console.log("clicked");
+        nav.classList.toggle("slideNavbar");
+        burger.classList.toggle("toggle");
+
+        navLinks.forEach((link) => {
+            link.classList.toggle("navLinksFade");
+        })
+
+    });
+
+    
+
+}
+
+navSlide();
+
+
 
 // Animations
 
