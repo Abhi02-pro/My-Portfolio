@@ -141,6 +141,39 @@ nav .burger div{
     line-height: 2rem;
 }
 
+/* //////////////////// Experience CSS ///////////////////// */
+
+#experience .experience-items{
+    display: flex;
+}
+
+.experience-card{
+    box-shadow: 0rem 0rem 2rem black;
+    border-radius: 1rem;
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+.experience-card h1{
+    font-size: 2.5rem;    
+}
+
+.experience-card hr{
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.experience-card p{
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.experience-card ul{
+    list-style: none;
+}
+
 
 /* //////////////////// Skills CSS ///////////////////// */
 
@@ -251,7 +284,59 @@ nav .burger div{
     font-size: 1.5rem;
 }
 
+/* //////////////////// Work CSS ///////////////////// */
 
+.work{
+    display: block;
+    padding: 1rem;
+    padding-top: 2rem;
+}
+
+
+
+.cards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 1.5rem;
+}
+
+.work-card{
+    display: grid;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0rem 0rem 2rem black;
+    border-radius: 1rem;
+    justify-content: space-evenly;
+}
+
+.work-card h1{
+    margin-bottom: 1rem;
+}
+
+.work-card p{
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+.card-buttons{
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.card-buttons a{
+    text-decoration: none;
+    border: 0.1rem solid ivory;
+    border-radius: 0.2rem;
+    margin: 0 1rem;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.card-buttons a:hover{
+    background: ivory;
+    color: #02171D;
+    font-weight: bold;
+}
 
 /* ------------------------ Media Query Small Screen ------------------------ */
 
