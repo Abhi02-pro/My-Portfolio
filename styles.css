@@ -187,6 +187,7 @@ nav .burger div{
 
 .experience-card ul{
     list-style: none;
+    font-size: 1.2rem;
 }
 
 
@@ -194,109 +195,68 @@ nav .burger div{
 
 
 .skill-box{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);   
     box-shadow: 0rem 0rem 2rem black;
     border-radius: 1rem;
     width: 100%;
-    text-align: center;
     margin: 2rem 1rem;
 }
 
 .skill-box h1{
     margin: 1rem auto;
     font-size: 2.2rem;
+    text-align: left;
 }
 
-.skill-box .technical, .skill-box .professional{
-    width: 50%;
-    padding: 1rem 0.5rem;
-}
-
-/* //////////////////// Technical Skills CSS ///////////////////// */
-
-.tech-skill{
-    margin: 1rem ;
-}
-
-.tech-skill .data{
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    font-size: 1.1rem;
-}
-
-.tech-skill .bar{
-    position: relative;
-    height: 1rem;
-    margin-top: 0.1rem;
-    background-color: rgb(14, 14, 14);
-    border-radius: 0.5rem;
-}
-
-.tech-skill .bar span.active-bar{
-    margin: 0 0.1rem;
-    position: absolute;
-    background-color: cyan;
-    height: 80%;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 0.4rem;
-
-}
-
-/* //////////////////// Professional Skills CSS ///////////////////// */
-
-.pro-skill{    
-    height: 90%;
+.skill-list{
     display: grid;
-    grid-template-columns: auto auto;   
-    justify-content: space-around;
-    align-items: center;
-}
-.circular{    
-    position: relative;
-    height: 14rem;
-    width: 15rem;
-}
-.circular svg{
-    height: 12rem;
-    width: 12rem;
+    grid-template-columns: repeat(2, auto);
 }
 
-.circular svg circle{
-    fill: transparent;
-    stroke: rgb(14, 14, 14);
-    stroke-width: 1rem;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 0;
-    stroke-linecap: round;
+.technical, .professional, .certifications{
+    margin: 2rem;
 }
 
-.circular svg circle:nth-child(2){
-    fill: transparent;
-    stroke: cyan;
-    stroke-width: 0.80rem;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    stroke-linecap: round;            
+.tech-skill, .pro-skill{   
+    margin: 1rem; 
 }
 
-.circular .level{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-45%);
-    font-size: 2.3rem;
+.tech-skill li, .pro-skill li{
+    list-style: circle;
+    text-align: left;
+    font-size: 1.3rem;
+    margin-top: 1rem;
 }
 
-.circular .skill-tag{
-    width: fit-content;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%,0);   
-    font-size: 1.5rem;
+.certifications h1{
+    text-align: center;
+}
+
+.certifications .certificates ul{
+    text-align: left;
+    list-style: circle;
+    font-size: 1.3rem;
+    margin: 1rem 2rem;
+    margin-right: 1rem;
+}
+
+.certifications .certificates li{
+    margin-top: 1rem;
+    margin-right: 0;
+    border: 2px solid cyan;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    
+}
+
+.certifications .certificates a{
+    text-decoration: none;
+}
+
+.certificates li:hover{
+    
+    color: cyan;
 }
 
 /* //////////////////// Work CSS ///////////////////// */
@@ -418,58 +378,15 @@ nav .burger div{
 
     /* //////////////////// Skills CSS ///////////////////// */
 
-    .skill-box h1{
-        margin-left: 0;
-        margin-right: 0;
-        font-size: 2rem;
+    .skill-list{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
     }
 
-    .circular{  
-        height: 12rem;
-        width: 13rem; 
-    }
-    .circular svg{
-        position: absolute;
-        left: 10%;
+    .professional{
+        margin-top: 0;
     }
 
-    .circular svg circle{
-        transform: scale(0.8,0.8);
-    }    
-
-    .circular .level{
-       left: 50%;
-        font-size: 2rem;
-    }
-    
-    .circular .skill-tag{
-         left: 50%;
-        font-size: 1.3rem;
-    }
-
-}
-
-@media only screen and (max-width: 820px){
-
-     /* //////////////////// Skills CSS ///////////////////// */
-
-    .pro-skill{    
-        grid-template-columns: 11rem 11rem;
-    }
-
-    .circular{
-        width: 10rem;
-    }
-
-    .circular svg{      
-        left: 0%;
-    }
-
-    .circular .skill-tag{
-        width: max-content;
-        left: 50%;
-       font-size: 1.3rem;
-   }
 
 }
 
@@ -601,22 +518,29 @@ nav .burger div{
         padding-bottom: 1rem;
     }
 
-    .skill-box .technical, .skill-box .professional{
-        width: 100%;
+    .skill-list{
+        display: flex;
     }
 
-    .skill-box .technical h1, .skill-box .professional h1{
-        margin-bottom: 2rem;
-    }
-
-    .professional .pro-skill{
-        grid-template-columns: auto auto;
-        row-gap: 2rem;
+    .professional{
+        margin-top: 2rem;
     }
 
 }
 
 @media only screen and (max-width: 560px){
+
+    h1{
+        font-size: 1.8rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    p, li{
+        font-size: 1.3rem;
+    }
 
     nav{
         left: 86%;
@@ -639,26 +563,37 @@ nav .burger div{
     .arrow{
         height: 2rem;
     }
+
+    /* //////////////////// Skills CSS ///////////////////// */
+
+    .skill-list{
+        display: block;
+    }
+
+    .professional{
+        margin-top: 2rem;
+    }
+
+    .certifications h1, .technical h1, .professional h1{
+        text-align: left;
+    }
+
 }
 
 @media only screen and (max-width: 440px){
 
-    nav{
-        left: 84%;
-        width: 16%;   
-    }
 
     /* //////////////////// Home CSS ///////////////////// */
 
     #home h1{
-        font-size: 2rem;
+        font-size: 2.1rem;
         margin-top: 3rem;
     }
     
     #home h2{
         margin-top: 1rem;
         margin-bottom: 3rem;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     
     .arrow{
@@ -698,9 +633,24 @@ nav .burger div{
     }
 
     .experience-card p{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         line-height: 1.5rem;
     }
+
+    .experience-card li{
+        font-size: 1.1rem;
+    }
+
+    /* //////////////////// Skills CSS ///////////////////// */
+
+    .skills h1{
+        font-size: 1.8rem;
+    }
+
+    .skills li{
+        font-size: 1.1rem;
+    }
+
 
 }
 
@@ -713,13 +663,15 @@ nav .burger div{
 
     /* //////////////////// Skills CSS ///////////////////// */
     
-    .pro-skill{            
-        display: block;
+    .technical, .professional, .certifications{
+        margin-left: 1rem;
+        margin-right: 0.5rem;
     }
 
-    .pro-skill .circular{
-        margin: 1.5rem auto 0;
+    .technical li, .professional li {
+        margin-top: 0.5rem;
     }
+
 
     /* //////////////////// Work CSS ///////////////////// */
 
@@ -775,208 +727,6 @@ nav .burger div{
 
 }
 
-
-/* --------------------- Techinacl Skills Animation --------------------- */
-
-.cpp.active-bar{
-    width: 75%;
-    animation: cpp 2s;
-}
-
-@keyframes cpp{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 75%;
-    }
-}
-
-.python.active-bar{
-    width: 70%;
-    animation: python 2s;
-}
-
-@keyframes python{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 70%;
-    }
-}
-
-.html.active-bar{
-    width: 80%;
-    animation: html 2s;
-}
-
-@keyframes html{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 80%;
-    }
-}
-
-.css.active-bar{
-    width: 65%;
-    animation: css 2s;
-}
-
-@keyframes css{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 65%;
-    }
-}
-
-.js.active-bar{
-    width: 55%;
-    animation: js 2s;
-}
-
-@keyframes js{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 55%;
-    }
-}
-
-.bootstrap.active-bar{
-    width: 70%;
-    animation: bootstrap 2s;
-}
-
-@keyframes bootstrap{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 70%;
-    }
-}
-
-.jQuery.active-bar{
-    width: 40%;
-    animation: jQuery 2s;
-}
-
-@keyframes jQuery{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 40%;
-    }
-}
-
-.react.active-bar{
-    width: 40%;
-    animation: react 2s;
-}
-
-@keyframes react{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 40%;
-    }
-}
-
-.node.active-bar{
-    width: 50%;
-    animation: node 2s;
-}
-
-@keyframes node{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 50%;
-    }
-}
-
-.express.active-bar{
-    width: 40%;
-    animation: express 2s;
-}
-
-@keyframes express{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 40%;
-    }
-}
-
-
-/* //////////////////// Professional Skills Animation ///////////////////// */
-
-.communication.active-circle{
-    stroke-dashoffset: 100;
-    animation: communication 2s steps(500) forwards;
-}
-
-@keyframes communication{
-    0%{
-        stroke-dashoffset: 500;
-    }
-    100%{
-        stroke-dashoffset: 100;
-    }
-}
-
-.team.active-circle{
-    stroke-dashoffset: 50;
-    animation: team 2s steps(500) forwards;
-}
-
-@keyframes team{
-    0%{
-        stroke-dashoffset: 500;
-    }
-    100%{
-        stroke-dashoffset: 50;
-    }
-}
-
-.project.active-circle{
-    stroke-dashoffset: 150;
-    animation: project 2s steps(500) forwards;
-}
-
-@keyframes project{
-    0%{
-        stroke-dashoffset: 500;
-    }
-    100%{
-        stroke-dashoffset: 150;
-    }
-}
-
-
-.creativity.active-circle{
-    stroke-dashoffset: 75;
-    animation: creativity 2s steps(500) forwards;
-}
-
-@keyframes creativity{
-    0%{
-        stroke-dashoffset: 500;
-    }
-    100%{
-        stroke-dashoffset: 75;
-    }
-}
 
 
 
