@@ -270,13 +270,13 @@ nav .burger div{
 .cards{
     display: grid;
     grid-template-columns: auto auto auto;
-    margin-top: 1.5rem;
+    margin-top: 1.3rem;
 }
 
 .work-card{
     display: grid;
     padding: 1rem;
-    margin: 1rem;
+    margin: 0.7rem;
     box-shadow: 0rem 0rem 2rem black;
     border-radius: 1rem;
     justify-content: space-evenly;
@@ -300,7 +300,7 @@ nav .burger div{
     text-decoration: none;
     border: 0.1rem solid ivory;
     border-radius: 0.2rem;
-    margin: 0 1rem;
+    margin: 0 0.2rem;
     padding: 0.3rem;
     font-size: 1.2rem;
 }
@@ -388,6 +388,15 @@ nav .burger div{
     }
 
 
+}
+
+@media only screen and (max-width: 900px){
+    /* //////////////////// Work CSS ///////////////////// */
+
+    .cards{
+        display: grid;
+        grid-template-columns: auto auto;        
+    }
 }
 
 @media only screen and (max-width: 740px){
@@ -524,7 +533,7 @@ nav .burger div{
 
     .professional{
         margin-top: 2rem;
-    }
+    }    
 
 }
 
@@ -576,6 +585,14 @@ nav .burger div{
 
     .certifications h1, .technical h1, .professional h1{
         text-align: left;
+    }
+
+    /* //////////////////// Work CSS ///////////////////// */
+
+
+     .cards{
+        display: grid;
+        grid-template-columns: auto;        
     }
 
 }
@@ -651,7 +668,6 @@ nav .burger div{
         font-size: 1.1rem;
     }
 
-
 }
 
 @media only screen and (max-width: 380px){
@@ -670,59 +686,6 @@ nav .burger div{
 
     .technical li, .professional li {
         margin-top: 0.5rem;
-    }
-
-
-    /* //////////////////// Work CSS ///////////////////// */
-
-    .work{
-        display: block;
-        padding: 1rem;
-        padding-top: 2rem;
-    }
-
-    .cards{
-        display: grid;
-        grid-template-columns: auto;
-        margin-top: 1.5rem;
-    }
-
-    .work-card{
-        display: grid;
-        padding: 1rem;
-        margin: 1rem;
-        box-shadow: 0rem 0rem 2rem black;
-        border-radius: 1rem;
-        justify-content: space-evenly;
-    }
-
-    .work-card h1{
-        margin-bottom: 1rem;
-    }
-
-    .work-card p{
-        font-size: 1.2rem;
-        line-height: 1.4rem;
-    }
-
-    .card-buttons{
-        margin-top: 1rem;
-        padding: 0.5rem;
-    }
-
-    .card-buttons a{
-        text-decoration: none;
-        border: 0.1rem solid ivory;
-        border-radius: 0.2rem;
-        margin: 0 1rem;
-        padding: 0.3rem;
-        font-size: 1.2rem;
-    }
-
-    .card-buttons a:hover{
-        background: ivory;
-        color: #02171D;
-        font-weight: bold;
     }
 
 }
