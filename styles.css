@@ -266,16 +266,30 @@ nav .burger div{
     display: block;
     padding: 1rem;
     padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .work h1{
     font-size: 2.5rem;
 }
 
+.work h1 a{
+    font-size: 2rem;
+    text-decoration: none;
+    box-shadow: inset 0rem 0rem 0.3rem ivory; 
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;    
+}
+
+.work h1 a:hover{
+    box-shadow: inset 0rem 0rem 0.8rem cyan;
+}
+
 .cards{
     display: grid;
     grid-template-columns: auto auto auto;
     margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
 }
 
 .work-card{
@@ -312,9 +326,6 @@ nav .burger div{
 }
 
 .card-buttons a:hover{
-    /* background: ivory;
-    color: #02171D;
-    font-weight: bold; */
     box-shadow: inset 0rem 0rem 0.5rem cyan;
 }
 
@@ -400,6 +411,7 @@ nav .burger div{
 }
 
 .contact-form .send-button{
+    cursor: pointer;
     padding: 0.5rem;
     background: none;
     font-size: 1.4rem;
